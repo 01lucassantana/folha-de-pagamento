@@ -1,0 +1,65 @@
+Algoritmo "FOLHA DE PAGAMENTO"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : EMERSON
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Samuel Aparecido Santos Silva RA:231007220
+// Data atual  : 06/04/2024
+Var
+// Seção de Declarações das variáveis
+ salario_base, horas_extras, valor_hora_extra, salario_bruto, desconto_irpf: real
+ salario_liquido, desconto_inss, salario_base_irpf : real
+ nome_funcionario: caracter
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+ escreva("Digite o nome do funcionario: ")
+ leia(nome_funcionario)
+ 
+ escreva("Digite o salario base do funcionario: ")
+ leia(salario_base)
+ 
+ escreva("Digite a quatidade de horas extras trabalhadas no mes : ")
+ leia(horas_extras)
+ 
+ escreva("Digite o valor da hora extra: ")
+ leia(valor_hora_extra)
+ 
+ valor_hora
+ se horas_extras >= 160 entao valor_hora_extra <= horas_extras - 160
+ senao horas_extras <= 0 entao
+ 
+
+  valor_hora_extra <- horas_extras * valor_hora_extra
+  
+  salario_bruto = salario_base + valor_hora_extra
+
+ escreva("Digite o salario bruto do funcionario: ")
+ leia(salario_bruto)
+ 
+ se salario_bruto <=1500 entao desconto_inss <- salario_bruto * 0.075
+  senao se salario_bruto <= 2203.48 entao desconto_inss <- salario_bruto * 0.09
+  senao se salario_bruto <= 3305.22 entao desconto_inss <- salario_bruto * 0.12
+  senao se salario_bruto <= 6433.57 entao desconto_inss <- salario_bruto * 0.14
+  senao desconto_inss <- 751.99
+  
+  salario_base_irpf <- salario_bruto - desconto_inss
+  
+    se salario_base_irpf <= 1903.98 entao
+    desconto_irpf <- 0
+    senao se salario_base_irpf <= 2826.65 entao
+    desconto_irpf <- salario_base_irpf * 0.075 - 142.80
+    senao se salario_base_irpf <= 3751.05 entao
+    desconto_irpf <- salario_base_irpf * 0.15 - 354.80
+    senao se salario_base_irpf <= 4664.68 entao
+    desconto_irpf <- salario_base_irpf * 0.225 - 636.13
+    senao desconto_irpf <- salario_base_irpf * 0.275 - 869.36
+    
+    
+  escreva("INSS RETIDO: ", desconto_inss)
+  escreva("IRPF RETIDO:", desconto_irpf)
+    
+    
+    
+    
+
+Fimalgoritmo
